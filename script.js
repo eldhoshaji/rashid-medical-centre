@@ -202,7 +202,7 @@ if (contactFormEl) {
         if (time) text += `*Preferred Time:* ${time}%0A`;
         if (message) text += `*Message:* ${message}%0A`;
 
-        const whatsappURL = `https://wa.me/919496829962?text=${text}`;
+        const whatsappURL = `https://wa.me/971501783229?text=${text}`;
         window.open(whatsappURL, '_blank');
 
         contactFormEl.reset();
