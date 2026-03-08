@@ -32,6 +32,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
+    overflow-x: hidden;
 }
 
 body {
@@ -656,6 +657,7 @@ ul { list-style: none; }
 .about {
     background: var(--white);
     position: relative;
+    overflow: hidden;
 }
 
 .about::before {
