@@ -1575,19 +1575,17 @@ ul { list-style: none; }
     height: 38px;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.12);
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: rgba(255,255,255,0.6);
     transition: var(--transition);
-    line-height: 1;
+    padding: 0;
 }
 
 .social-link svg {
-    width: 18px;
-    height: 18px;
-    display: block;
-    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
 }
 
 .social-link:hover {
@@ -1603,7 +1601,7 @@ ul { list-style: none; }
     position: relative;
 }
 
-.footer-col a {
+.footer-col a:not(.social-link) {
     display: block;
     font-size: 0.84rem;
     color: rgba(255,255,255,0.6);
