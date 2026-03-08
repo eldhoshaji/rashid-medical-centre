@@ -28,6 +28,19 @@ nav.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+// ===== DOCTOR CARD BACK SCROLL FIX =====
+document.querySelectorAll('.doctor-card-back').forEach(back => {
+    back.addEventListener('touchmove', e => e.stopPropagation());
+});
+
+// Only flip back via the "Tap to go back" button
+document.querySelectorAll('.doctor-tap-back').forEach(btn => {
+    btn.addEventListener('click', e => {
+        e.stopPropagation();
+        btn.closest('.doctor-card').classList.remove('flipped');
+    });
+});
+
 // ===== ACTIVE NAV LINK ON SCROLL =====
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
