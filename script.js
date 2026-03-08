@@ -28,9 +28,12 @@ nav.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// ===== DOCTOR CARD BACK SCROLL FIX =====
-document.querySelectorAll('.doctor-card-back').forEach(back => {
-    back.addEventListener('touchmove', e => e.stopPropagation());
+// Scroll card back to top when flipped open
+document.querySelectorAll('.doctor-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const back = card.querySelector('.doctor-card-back');
+        if (back) back.scrollTop = 0;
+    });
 });
 
 // Only flip back via the "Tap to go back" button
