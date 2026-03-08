@@ -30,7 +30,7 @@
 }
 
 html {
-    font-size: 110%;
+    font-size: 115%;
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     overflow-x: hidden;
@@ -1042,32 +1042,32 @@ ul { list-style: none; }
 }
 
 .doctor-card-back .doctor-specialty {
-    font-size: 0.68rem;
+    font-size: 0.85rem;
     color: var(--primary);
     font-weight: 500;
     margin-bottom: 8px;
 }
 
 .doctor-bio {
-    font-size: 0.68rem;
+    font-size: 0.85rem;
     color: var(--text);
-    line-height: 1.45;
-    margin-bottom: 8px;
+    line-height: 1.55;
+    margin-bottom: 10px;
 }
 
 .doctor-services-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 4px;
 }
 
 .doctor-services-list li {
-    font-size: 0.65rem;
+    font-size: 0.82rem;
     color: var(--text);
-    line-height: 1.4;
+    line-height: 1.5;
     padding-left: 14px;
     position: relative;
 }
