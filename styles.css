@@ -982,22 +982,117 @@ ul { list-style: none; }
 }
 
 .doctor-card {
-    background: var(--white);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: var(--transition);
-    border: 1px solid var(--border);
+    perspective: 1000px;
+    cursor: pointer;
+    min-height: 380px;
 }
 
-.doctor-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
-    border-color: transparent;
+.doctor-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.doctor-card.flipped .doctor-card-inner {
+    transform: rotateY(180deg);
+}
+
+.doctor-card-front,
+.doctor-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--white);
+}
+
+.doctor-card-front {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-card-back {
+    transform: rotateY(180deg);
+    padding: 24px 20px;
+    overflow-y: auto;
+}
+
+.doctor-card-back h3 {
+    font-size: 1.05rem;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.doctor-card-back .doctor-specialty {
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.doctor-bio {
+    font-size: 0.78rem;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.doctor-services-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.doctor-services-list li {
+    font-size: 0.73rem;
+    color: var(--text);
+    line-height: 1.5;
+    padding-left: 16px;
+    position: relative;
+}
+
+.doctor-services-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+.doctor-tap {
+    font-size: 0.7rem;
+    color: var(--primary);
+    font-weight: 500;
+    text-align: center;
+    margin-top: auto;
+    padding-top: 8px;
 }
 
 .doctor-image {
     position: relative;
     overflow: hidden;
+}
+
+.doctor-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: inherit;
+    background: linear-gradient(145deg, #e8eff0, #d4e0e3);
 }
 
 .doctor-placeholder {
@@ -1082,6 +1177,9 @@ ul { list-style: none; }
     padding: 28px 24px;
     border-radius: var(--radius-lg);
     transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow: var(--shadow-sm);
 }
 
@@ -1134,6 +1232,69 @@ ul { list-style: none; }
 .testimonial-author small {
     color: var(--text-light);
     font-size: 0.75rem;
+}
+
+/* Expandable review */
+.review-expandable p {
+    color: var(--text);
+    font-size: 0.88rem;
+    line-height: 1.75;
+    margin-bottom: 8px;
+    font-style: italic;
+}
+
+.review-more {
+    display: none;
+}
+
+.review-expandable.expanded .review-more {
+    display: inline;
+}
+
+.review-toggle {
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.review-toggle:hover {
+    text-decoration: underline;
+}
+
+.review-expandable.expanded .review-toggle::after {
+    content: none;
+}
+
+/* Extra reviews toggle */
+.testimonials-extra {
+    display: none;
+    margin-top: 20px;
+}
+
+.testimonials-extra.show {
+    display: grid;
+}
+
+.btn-view-more {
+    display: block;
+    margin: 24px auto 0;
+    padding: 10px 28px;
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-view-more:hover {
+    background: var(--primary);
+    color: var(--white);
 }
 
 /* ===== INSURANCE (mobile-first) ===== */
@@ -1375,13 +1536,19 @@ ul { list-style: none; }
     height: 38px;
     border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.12);
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 600;
     color: rgba(255,255,255,0.6);
     transition: var(--transition);
+    line-height: 1;
+}
+
+.social-link svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    flex-shrink: 0;
 }
 
 .social-link:hover {
@@ -1664,6 +1831,10 @@ ul { list-style: none; }
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
+    }
+
+    .testimonials-extra {
+        margin-top: 24px;
     }
 
     .testimonials-grid .testimonial-card:last-child {
@@ -2031,6 +2202,10 @@ ul { list-style: none; }
     .testimonials-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 28px;
+    }
+
+    .testimonials-extra {
+        margin-top: 28px;
     }
 
     .testimonials-grid .testimonial-card:last-child {
