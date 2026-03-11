@@ -1,3 +1,58 @@
+// ===== LANGUAGE SWITCHER =====
+function switchLanguage(lang) {
+    const t = translations[lang];
+    if (!t) return;
+
+    // Update text content
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.textContent = t[key];
+    });
+
+    // Update HTML content (for elements with <br>, <span> etc.)
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (t[key]) el.innerHTML = t[key];
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key]) el.placeholder = t[key];
+    });
+
+    // Set RTL/LTR direction
+    const isRtl = rtlLanguages.includes(lang);
+    document.documentElement.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', lang);
+
+    // Update toggle active state
+    document.querySelectorAll('.lang-option').forEach(opt => {
+        opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
+    });
+
+    // Save preference
+    localStorage.setItem('lang', lang);
+}
+
+// Init language from saved preference or default to English
+document.addEventListener('DOMContentLoaded', () => {
+    const savedLang = localStorage.getItem('lang') || 'en';
+    switchLanguage(savedLang);
+
+    // Language toggle click handler
+    const langToggle = document.getElementById('langToggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', () => {
+            const currentLang = document.documentElement.getAttribute('lang') || 'en';
+            // Cycle through available languages
+            const langs = Object.keys(translations);
+            const nextIndex = (langs.indexOf(currentLang) + 1) % langs.length;
+            switchLanguage(langs[nextIndex]);
+        });
+    }
+});
+
 // ===== HEADER SCROLL EFFECT =====
 const header = document.getElementById('header');
 

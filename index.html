@@ -190,7 +190,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -202,14 +202,18 @@
                 <img src="images/logo-full.png" alt="Rashid Medical Centre" class="logo-img">
             </a>
             <nav class="nav" id="nav">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#doctors" class="nav-link">Our Doctors</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#home" class="nav-link active" data-i18n="nav_home">Home</a>
+                <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+                <a href="#doctors" class="nav-link" data-i18n="nav_doctors">Our Doctors</a>
+                <a href="#testimonials" class="nav-link" data-i18n="nav_testimonials">Testimonials</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
             </nav>
-            <a href="#contact" class="btn btn-primary header-cta">Book Appointment</a>
+            <a href="#contact" class="btn btn-primary header-cta" data-i18n="header_cta">Book Appointment</a>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-option" data-lang="en">EN</span>
+                <span class="lang-option" data-lang="ar">عر</span>
+            </button>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -222,21 +226,21 @@
         <div class="hero-bg"></div>
         <div class="container hero-inner">
             <div class="hero-content">
-                <p class="hero-subtitle">Welcome to Rashid Medical Centre</p>
-                <h1 class="hero-title">Your Perfect Smile<br>Starts <span class="text-accent">Here</span></h1>
-                <p class="hero-desc">Expert dental care and general medicine with a gentle touch. Specializing in orthodontics, Invisalign, cosmetic dentistry and more in the heart of Ajman, UAE.</p>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Welcome to Rashid Medical Centre</p>
+                <h1 class="hero-title" data-i18n-html="hero_title">Your Perfect Smile<br>Starts <span class="text-accent">Here</span></h1>
+                <p class="hero-desc" data-i18n="hero_desc">Expert dental care and general medicine with a gentle touch. Specializing in orthodontics, Invisalign, cosmetic dentistry and more in the heart of Ajman, UAE.</p>
                 <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary btn-lg">Book an Appointment</a>
-                    <a href="#services" class="btn btn-outline btn-lg">Our Services</a>
+                    <a href="#contact" class="btn btn-primary btn-lg" data-i18n="hero_btn_book">Book an Appointment</a>
+                    <a href="#services" class="btn btn-outline btn-lg" data-i18n="hero_btn_services">Our Services</a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">25+</span>
-                        <span class="stat-label">Years Experience</span>
+                        <span class="stat-number" data-i18n="hero_stat1_number">25+</span>
+                        <span class="stat-label" data-i18n="hero_stat1_label">Years Experience</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number">1K+</span>
-                        <span class="stat-label">Happy Patients</span>
+                        <span class="stat-number" data-i18n="hero_stat2_number">1K+</span>
+                        <span class="stat-label" data-i18n="hero_stat2_label">Happy Patients</span>
                     </div>
                 </div>
             </div>
@@ -246,15 +250,15 @@
                     <div class="floating-card card-1">
                         <span class="fc-icon">&#9733;</span>
                         <div>
-                            <strong>4.5 Rating</strong>
-                            <small>Google Reviews</small>
+                            <strong data-i18n="hero_rating">4.5 Rating</strong>
+                            <small data-i18n="hero_rating_sub">Google Reviews</small>
                         </div>
                     </div>
                     <div class="floating-card card-2">
                         <span class="fc-icon fc-check">&#10003;</span>
                         <div>
-                            <strong>MOH Licensed</strong>
-                            <small>Certified Facility</small>
+                            <strong data-i18n="hero_moh">MOH Licensed</strong>
+                            <small data-i18n="hero_moh_sub">Certified Facility</small>
                         </div>
                     </div>
                 </div>
@@ -274,38 +278,38 @@
                 <div class="about-image">
                     <img src="images/about-dental.jpg" alt="Inside Rashid Medical Centre dental clinic" class="about-img">
                     <div class="experience-badge">
-                        <span class="exp-number">25+</span>
-                        <span class="exp-text">Years of<br>Excellence</span>
+                        <span class="exp-number" data-i18n="exp_number">25+</span>
+                        <span class="exp-text" data-i18n-html="exp_text">Years of<br>Excellence</span>
                     </div>
                 </div>
                 <div class="about-content">
-                    <p class="section-subtitle">About Us</p>
-                    <h2 class="section-title">Committed to Delivering <span class="text-accent">Beautiful Smiles</span></h2>
-                    <p class="about-desc">Rashid Medical Centre has been a trusted dental clinic in Ajman for over 25 years. We combine cutting-edge dental technology with a gentle, patient-first approach to ensure every visit is comfortable and every smile is perfect.</p>
+                    <p class="section-subtitle" data-i18n="about_subtitle">About Us</p>
+                    <h2 class="section-title" data-i18n-html="about_title">Committed to Delivering <span class="text-accent">Beautiful Smiles</span></h2>
+                    <p class="about-desc" data-i18n="about_desc">Rashid Medical Centre has been a trusted dental clinic in Ajman for over 25 years. We combine cutting-edge dental technology with a gentle, patient-first approach to ensure every visit is comfortable and every smile is perfect.</p>
                     <div class="about-features">
                         <div class="about-feature">
                             <div class="af-icon">&#9670;</div>
                             <div>
-                                <h4>Specialist Orthodontists</h4>
-                                <p>Our UK-qualified orthodontists bring world-class expertise to every treatment plan.</p>
+                                <h4 data-i18n="about_feat1_title">Specialist Orthodontists</h4>
+                                <p data-i18n="about_feat1_desc">Our UK-qualified orthodontists bring world-class expertise to every treatment plan.</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="af-icon">&#9670;</div>
                             <div>
-                                <h4>Advanced Technology</h4>
-                                <p>Digital X-rays, 3D scanning, and the latest dental equipment for precise, painless treatments.</p>
+                                <h4 data-i18n="about_feat2_title">Advanced Technology</h4>
+                                <p data-i18n="about_feat2_desc">Digital X-rays, 3D scanning, and the latest dental equipment for precise, painless treatments.</p>
                             </div>
                         </div>
                         <div class="about-feature">
                             <div class="af-icon">&#9670;</div>
                             <div>
-                                <h4>Affordable Dental Care</h4>
-                                <p>Premium dental services at competitive prices, with insurance accepted from all major providers.</p>
+                                <h4 data-i18n="about_feat3_title">Affordable Dental Care</h4>
+                                <p data-i18n="about_feat3_desc">Premium dental services at competitive prices, with insurance accepted from all major providers.</p>
                             </div>
                         </div>
                     </div>
-                    <a href="#contact" class="btn btn-primary">Learn More About Us</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="about_btn">Learn More About Us</a>
                 </div>
             </div>
         </div>
@@ -315,80 +319,80 @@
     <section class="services section" id="services">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Our Services</p>
-                <h2 class="section-title">Comprehensive Healthcare <span class="text-accent">Services</span></h2>
-                <p class="section-desc">From general medicine to advanced orthodontics, we offer a full range of dental and medical services under one roof.</p>
+                <p class="section-subtitle" data-i18n="services_subtitle">Our Services</p>
+                <h2 class="section-title" data-i18n-html="services_title">Comprehensive Healthcare <span class="text-accent">Services</span></h2>
+                <p class="section-desc" data-i18n="services_desc">From general medicine to advanced orthodontics, we offer a full range of dental and medical services under one roof.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2C4.2 2 2 4.2 2 7c0 2.5 1.5 5 3 7s3 4.5 3 7c0 1.1.9 2 2 2s2-.9 2-2c0-2.5 1.5-5 3-7s3-4.5 3-7c0-2.8-2.2-5-5-5-1.5 0-2.5.5-3 1-.5-.5-1.5-1-3-1z"/></svg>
                     </div>
-                    <h3>Orthodontics</h3>
-                    <p>Expert teeth alignment with traditional braces, ceramic braces, and advanced orthodontic treatments for all ages.</p>
+                    <h3 data-i18n="svc_orthodontics">Orthodontics</h3>
+                    <p data-i18n="svc_orthodontics_desc">Expert teeth alignment with traditional braces, ceramic braces, and advanced orthodontic treatments for all ages.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-1.5 0-2.5 1-3 2H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2c-.5-1-1.5-2-3-2z"/><path d="M9 14l2 2 4-4"/></svg>
                     </div>
-                    <h3>Invisalign</h3>
-                    <p>Clear, virtually invisible aligners that straighten your teeth without the look of traditional metal braces.</p>
+                    <h3 data-i18n="svc_invisalign">Invisalign</h3>
+                    <p data-i18n="svc_invisalign_desc">Clear, virtually invisible aligners that straighten your teeth without the look of traditional metal braces.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
-                    <h3>Cosmetic Dentistry</h3>
-                    <p>Hollywood smile makeovers, veneers, teeth whitening, and bonding to give you the perfect, confident smile.</p>
+                    <h3 data-i18n="svc_cosmetic">Cosmetic Dentistry</h3>
+                    <p data-i18n="svc_cosmetic_desc">Hollywood smile makeovers, veneers, teeth whitening, and bonding to give you the perfect, confident smile.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
                     </div>
-                    <h3>Dental Implants</h3>
-                    <p>Permanent tooth replacement solutions using the latest implant technology for a natural look and feel.</p>
+                    <h3 data-i18n="svc_implants">Dental Implants</h3>
+                    <p data-i18n="svc_implants_desc">Permanent tooth replacement solutions using the latest implant technology for a natural look and feel.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     </div>
-                    <h3>Root Canal Treatment</h3>
-                    <p>Painless root canal therapy to save damaged teeth using modern techniques and advanced anesthesia.</p>
+                    <h3 data-i18n="svc_rootcanal">Root Canal Treatment</h3>
+                    <p data-i18n="svc_rootcanal_desc">Painless root canal therapy to save damaged teeth using modern techniques and advanced anesthesia.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3>Children's Dentistry</h3>
-                    <p>Gentle and fun dental care for kids, including preventive treatments, sealants, and early orthodontic assessments.</p>
+                    <h3 data-i18n="svc_children">Children's Dentistry</h3>
+                    <p data-i18n="svc_children_desc">Gentle and fun dental care for kids, including preventive treatments, sealants, and early orthodontic assessments.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="16" rx="2"/><path d="M8 21h8M12 19v2"/><circle cx="12" cy="11" r="4"/><path d="M12 7v8M8 11h8"/></svg>
                     </div>
-                    <h3>Digital X-Rays</h3>
-                    <p>Low-radiation digital dental X-rays for accurate diagnosis with instant results and detailed imaging.</p>
+                    <h3 data-i18n="svc_xray">Digital X-Rays</h3>
+                    <p data-i18n="svc_xray_desc">Low-radiation digital dental X-rays for accurate diagnosis with instant results and detailed imaging.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6v5l4 8H5l4-8V3z"/><path d="M7 3h10"/><path d="M3 20h18"/><circle cx="12" cy="14" r="1"/></svg>
                     </div>
-                    <h3>Teeth Cleaning</h3>
-                    <p>Professional dental cleaning, scaling, and polishing to maintain healthy gums and prevent tooth decay.</p>
+                    <h3 data-i18n="svc_cleaning">Teeth Cleaning</h3>
+                    <p data-i18n="svc_cleaning_desc">Professional dental cleaning, scaling, and polishing to maintain healthy gums and prevent tooth decay.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z"/><path d="M8 12h8"/><path d="M12 8v8"/><path d="M7 3l2 4M17 3l-2 4"/></svg>
                     </div>
-                    <h3>Intraoral Scanner</h3>
-                    <p>Advanced digital impressions using 3D intraoral scanning technology for precise, comfortable, and fast dental treatment planning.</p>
+                    <h3 data-i18n="svc_scanner">Intraoral Scanner</h3>
+                    <p data-i18n="svc_scanner_desc">Advanced digital impressions using 3D intraoral scanning technology for precise, comfortable, and fast dental treatment planning.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     </div>
-                    <h3>General Medicine</h3>
-                    <p>Comprehensive GP consultations for everyday health concerns, chronic disease management, and preventive care for the whole family.</p>
+                    <h3 data-i18n="svc_gp">General Medicine</h3>
+                    <p data-i18n="svc_gp_desc">Comprehensive GP consultations for everyday health concerns, chronic disease management, and preventive care for the whole family.</p>
                 </div>
             </div>
         </div>
@@ -399,35 +403,35 @@
         <div class="container">
             <div class="why-us-grid">
                 <div class="why-us-content">
-                    <p class="section-subtitle">Why Choose Us</p>
-                    <h2 class="section-title">Your Trusted Dental <span class="text-accent">Partner</span></h2>
+                    <p class="section-subtitle" data-i18n="why_subtitle">Why Choose Us</p>
+                    <h2 class="section-title" data-i18n-html="why_title">Your Trusted Dental <span class="text-accent">Partner</span></h2>
                     <div class="why-items">
                         <div class="why-item">
                             <div class="why-number">01</div>
                             <div>
-                                <h4>Insurance Accepted</h4>
-                                <p>We work with all major insurance providers in the UAE for a hassle-free experience.</p>
+                                <h4 data-i18n="why_item1_title">Insurance Accepted</h4>
+                                <p data-i18n="why_item1_desc">We work with all major insurance providers in the UAE for a hassle-free experience.</p>
                             </div>
                         </div>
                         <div class="why-item">
                             <div class="why-number">02</div>
                             <div>
-                                <h4>Multilingual Staff</h4>
-                                <p>Our team speaks Arabic, English, Hindi, Urdu, and other languages for your comfort.</p>
+                                <h4 data-i18n="why_item2_title">Multilingual Staff</h4>
+                                <p data-i18n="why_item2_desc">Our team speaks Arabic, English, Hindi, Urdu, and other languages for your comfort.</p>
                             </div>
                         </div>
                         <div class="why-item">
                             <div class="why-number">03</div>
                             <div>
-                                <h4>Convenient Location</h4>
-                                <p>Easily accessible location in Ajman with ample parking and extended working hours.</p>
+                                <h4 data-i18n="why_item3_title">Convenient Location</h4>
+                                <p data-i18n="why_item3_desc">Easily accessible location in Ajman with ample parking and extended working hours.</p>
                             </div>
                         </div>
                         <div class="why-item">
                             <div class="why-number">04</div>
                             <div>
-                                <h4>Latest Dental Technology</h4>
-                                <p>Equipped with digital X-rays, 3D scanners, and modern dental tools for precise results.</p>
+                                <h4 data-i18n="why_item4_title">Latest Dental Technology</h4>
+                                <p data-i18n="why_item4_desc">Equipped with digital X-rays, 3D scanners, and modern dental tools for precise results.</p>
                             </div>
                         </div>
                     </div>
@@ -443,9 +447,9 @@
     <section class="doctors section" id="doctors">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Our Team</p>
-                <h2 class="section-title">Meet Our <span class="text-accent">Specialists</span></h2>
-                <p class="section-desc">Our experienced and caring dental specialists are here to give you the smile you deserve.</p>
+                <p class="section-subtitle" data-i18n="doctors_subtitle">Our Team</p>
+                <h2 class="section-title" data-i18n-html="doctors_title">Meet Our <span class="text-accent">Specialists</span></h2>
+                <p class="section-desc" data-i18n="doctors_desc">Our experienced and caring dental specialists are here to give you the smile you deserve.</p>
             </div>
             <div class="doctors-grid doctors-grid-2">
                 <div class="doctor-card" onclick="this.classList.toggle('flipped')">
@@ -453,28 +457,28 @@
                         <div class="doctor-card-front">
                             <div class="doctor-image">
                                 <img src="images/dr-manoj.png" alt="Dr. Manoj Mathew - Senior Dental Surgeon" class="doctor-img">
-                                <div class="doctor-tap-overlay">Tap to view profile <span class="tap-arrow">→</span></div>
+                                <div class="doctor-tap-overlay" data-i18n="tap_view">Tap to view profile <span class="tap-arrow">→</span></div>
                             </div>
                             <div class="doctor-info">
-                                <h3>Dr. Manoj Mathew</h3>
-                                <p class="doctor-specialty">Senior Dental Surgeon</p>
-                                <p class="doctor-quals">BDS, FAGE</p>
+                                <h3 data-i18n="dr_manoj_name">Dr. Manoj Mathew</h3>
+                                <p class="doctor-specialty" data-i18n="dr_manoj_specialty">Senior Dental Surgeon</p>
+                                <p class="doctor-quals" data-i18n="dr_manoj_quals">BDS, FAGE</p>
                             </div>
                         </div>
                         <div class="doctor-card-back">
-                            <h3>Dr. Manoj Mathew</h3>
-                            <p class="doctor-specialty">Senior Dental Surgeon, BDS, FAGE</p>
-                            <p class="doctor-bio">Dr. Manoj Mathew is a highly experienced senior dental surgeon with more than 30 years of dedicated practice in general and restorative dentistry. He provides comprehensive dental care with a gentle, patient-first approach.</p>
+                            <h3 data-i18n="dr_manoj_name">Dr. Manoj Mathew</h3>
+                            <p class="doctor-specialty" data-i18n="dr_manoj_specialty_full">Senior Dental Surgeon, BDS, FAGE</p>
+                            <p class="doctor-bio" data-i18n="dr_manoj_bio">Dr. Manoj Mathew is a highly experienced senior dental surgeon with more than 30 years of dedicated practice in general and restorative dentistry. He provides comprehensive dental care with a gentle, patient-first approach.</p>
                             <ul class="doctor-services-list">
-                                <li>General & Restorative Dentistry</li>
-                                <li>Root Canal Treatment</li>
-                                <li>Cosmetic Dentistry & Veneers</li>
-                                <li>Crown & Bridge</li>
-                                <li>Teeth Whitening & Cleaning</li>
-                                <li>Extractions & Minor Oral Surgery</li>
-                                <li>Children's Dentistry</li>
+                                <li data-i18n="dr_manoj_svc1">General & Restorative Dentistry</li>
+                                <li data-i18n="dr_manoj_svc2">Root Canal Treatment</li>
+                                <li data-i18n="dr_manoj_svc3">Cosmetic Dentistry & Veneers</li>
+                                <li data-i18n="dr_manoj_svc4">Crown & Bridge</li>
+                                <li data-i18n="dr_manoj_svc5">Teeth Whitening & Cleaning</li>
+                                <li data-i18n="dr_manoj_svc6">Extractions & Minor Oral Surgery</li>
+                                <li data-i18n="dr_manoj_svc7">Children's Dentistry</li>
                             </ul>
-                            <p class="doctor-tap-back">← Tap to go back</p>
+                            <p class="doctor-tap-back" data-i18n="tap_back">← Tap to go back</p>
                         </div>
                     </div>
                 </div>
@@ -483,32 +487,32 @@
                         <div class="doctor-card-front">
                             <div class="doctor-image">
                                 <img src="images/dr-reeja.png" alt="Dr. Reeja Moideen - Specialist Orthodontist" class="doctor-img">
-                                <div class="doctor-tap-overlay">Tap to view profile <span class="tap-arrow">→</span></div>
+                                <div class="doctor-tap-overlay" data-i18n="tap_view">Tap to view profile <span class="tap-arrow">→</span></div>
                             </div>
                             <div class="doctor-info">
-                                <h3>Dr. Reeja Moideen</h3>
-                                <p class="doctor-specialty">Specialist Orthodontist</p>
-                                <p class="doctor-quals">MSc Orthodontics, MOrth RCSEd UK</p>
+                                <h3 data-i18n="dr_reeja_name">Dr. Reeja Moideen</h3>
+                                <p class="doctor-specialty" data-i18n="dr_reeja_specialty">Specialist Orthodontist</p>
+                                <p class="doctor-quals" data-i18n="dr_reeja_quals">MSc Orthodontics, MOrth RCSEd UK</p>
                             </div>
                         </div>
                         <div class="doctor-card-back">
-                            <h3>Dr. Reeja Moideen</h3>
-                            <p class="doctor-specialty">Specialist Orthodontist, MSc Orthodontics, MOrth RCSEd UK</p>
-                            <p class="doctor-bio">Dr. Reeja Moideen is a specialist orthodontist with extensive knowledge and experience. She graduated from the prestigious Government Dental College Calicut, India, in 2004 and later attained post-graduation in Orthodontics from Danube University, Austria, and qualified with MOrth from the Royal College of Surgeons, Edinburgh, UK. Besides having a wealth of experience, she ensures that her patients benefit from the most up-to-date techniques in dentistry and is committed to excellence. She is highly experienced in straightening/aligning teeth, especially using the popular Invisalign treatment.</p>
+                            <h3 data-i18n="dr_reeja_name">Dr. Reeja Moideen</h3>
+                            <p class="doctor-specialty" data-i18n="dr_reeja_specialty_full">Specialist Orthodontist, MSc Orthodontics, MOrth RCSEd UK</p>
+                            <p class="doctor-bio" data-i18n="dr_reeja_bio">Dr. Reeja Moideen is a specialist orthodontist with extensive knowledge and experience. She graduated from the prestigious Government Dental College Calicut, India, in 2004 and later attained post-graduation in Orthodontics from Danube University, Austria, and qualified with MOrth from the Royal College of Surgeons, Edinburgh, UK. Besides having a wealth of experience, she ensures that her patients benefit from the most up-to-date techniques in dentistry and is committed to excellence. She is highly experienced in straightening/aligning teeth, especially using the popular Invisalign treatment.</p>
                             <ul class="doctor-services-list">
-                                <li>Correction of Multiple Teeth Alignment Issues with Fixed Metal & Ceramic Braces</li>
-                                <li>Damon Metal & Ceramic Braces</li>
-                                <li>Invisalign Provider / Clear Aligner Therapy</li>
-                                <li>Jaw Expanders</li>
-                                <li>Intraoral Scanning</li>
-                                <li>Mini-Implants / Temporary Anchorage Devices</li>
-                                <li>Growth Modification / Jaw Alignment Treatments</li>
-                                <li>Habit Correction</li>
-                                <li>Interceptive & Preventive Orthodontics: Early interventions to guide proper teeth and jaw growth</li>
-                                <li>Surgical Orthodontics</li>
-                                <li>Alignment of Impacted Teeth</li>
+                                <li data-i18n="dr_reeja_svc1">Correction of Multiple Teeth Alignment Issues with Fixed Metal & Ceramic Braces</li>
+                                <li data-i18n="dr_reeja_svc2">Damon Metal & Ceramic Braces</li>
+                                <li data-i18n="dr_reeja_svc3">Invisalign Provider / Clear Aligner Therapy</li>
+                                <li data-i18n="dr_reeja_svc4">Jaw Expanders</li>
+                                <li data-i18n="dr_reeja_svc5">Intraoral Scanning</li>
+                                <li data-i18n="dr_reeja_svc6">Mini-Implants / Temporary Anchorage Devices</li>
+                                <li data-i18n="dr_reeja_svc7">Growth Modification / Jaw Alignment Treatments</li>
+                                <li data-i18n="dr_reeja_svc8">Habit Correction</li>
+                                <li data-i18n="dr_reeja_svc9">Interceptive & Preventive Orthodontics: Early interventions to guide proper teeth and jaw growth</li>
+                                <li data-i18n="dr_reeja_svc10">Surgical Orthodontics</li>
+                                <li data-i18n="dr_reeja_svc11">Alignment of Impacted Teeth</li>
                             </ul>
-                            <p class="doctor-tap-back">← Tap to go back</p>
+                            <p class="doctor-tap-back" data-i18n="tap_back">← Tap to go back</p>
                         </div>
                     </div>
                 </div>
@@ -553,43 +557,43 @@
     <section class="testimonials section" id="testimonials">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Testimonials</p>
-                <h2 class="section-title">What Our Patients <span class="text-accent">Say</span></h2>
+                <p class="section-subtitle" data-i18n="test_subtitle">Testimonials</p>
+                <h2 class="section-title" data-i18n-html="test_title">What Our Patients <span class="text-accent">Say</span></h2>
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"Love going to Dr. Manoj Matthew for my teeth. He's really quick and efficient. The clinic has great customer service too!"</p>
+                    <p data-i18n="test_review1">"Love going to Dr. Manoj Matthew for my teeth. He's really quick and efficient. The clinic has great customer service too!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
                         <div>
                             <strong>Anjali Rose Dayal</strong>
-                            <small>Google Review</small>
+                            <small data-i18n="google_review">Google Review</small>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"Best orthodontist clinic ever! The braces treatment was smooth, comfortable, and totally worth it. Super professional team, very friendly, and they really know what they're doing. I'm already seeing amazing results. Couldn't be happier — highly recommend this clinic!"</p>
+                    <p data-i18n="test_review2">"Best orthodontist clinic ever! The braces treatment was smooth, comfortable, and totally worth it. Super professional team, very friendly, and they really know what they're doing. I'm already seeing amazing results. Couldn't be happier — highly recommend this clinic!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">J</div>
                         <div>
                             <strong>Johan Gimmy</strong>
-                            <small>Google Review</small>
+                            <small data-i18n="google_review">Google Review</small>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <div class="review-expandable">
-                        <p>"Being a diabetic patient, I was particularly anxious about undergoing a root canal treatment. However, my experience with Dr. Reeja Moideen at Rashid Medical Centre completely changed my perspective. <span class="review-more">From the very first consultation, Dr. Reeja took the time to understand my medical history and explain every step of the procedure in detail. She was incredibly thorough in managing my blood sugar levels throughout the treatment, coordinating with my physician to ensure everything was safe. The root canal itself was virtually painless — her expertise and gentle approach made all the difference. What impressed me most was her follow-up care and genuine concern for my recovery. She made sure I was comfortable at every stage. For anyone with medical conditions who might be hesitant about dental procedures, I highly recommend Dr. Reeja Moideen. She truly goes above and beyond for her patients!"</span></p>
-                        <span class="review-toggle" onclick="this.parentElement.classList.toggle('expanded'); this.textContent = this.parentElement.classList.contains('expanded') ? 'Read less' : 'Read more'">Read more</span>
+                        <p data-i18n-html="test_review3">"Being a diabetic patient, I was particularly anxious about undergoing a root canal treatment. However, my experience with Dr. Reeja Moideen at Rashid Medical Centre completely changed my perspective. <span class="review-more">From the very first consultation, Dr. Reeja took the time to understand my medical history and explain every step of the procedure in detail. She was incredibly thorough in managing my blood sugar levels throughout the treatment, coordinating with my physician to ensure everything was safe. The root canal itself was virtually painless — her expertise and gentle approach made all the difference. What impressed me most was her follow-up care and genuine concern for my recovery. She made sure I was comfortable at every stage. For anyone with medical conditions who might be hesitant about dental procedures, I highly recommend Dr. Reeja Moideen. She truly goes above and beyond for her patients!"</span></p>
+                        <span class="review-toggle" data-i18n="read_more" onclick="this.parentElement.classList.toggle('expanded'); const t = translations[document.documentElement.getAttribute('lang') || 'en']; this.textContent = this.parentElement.classList.contains('expanded') ? (t?.read_less || 'Read less') : (t?.read_more || 'Read more')">Read more</span>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
                         <div>
                             <strong>Arish Ibrahim</strong>
-                            <small>Google Review</small>
+                            <small data-i18n="google_review">Google Review</small>
                         </div>
                     </div>
                 </div>
@@ -597,39 +601,39 @@
             <div class="testimonials-grid testimonials-extra" id="extraReviews">
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"I visit Dr. Manoj for my daughter's braces. It was a very good experience — my daughter just had braces a few months ago and it's getting better. Even the tooth extraction was not painful!"</p>
+                    <p data-i18n="test_review4">"I visit Dr. Manoj for my daughter's braces. It was a very good experience — my daughter just had braces a few months ago and it's getting better. Even the tooth extraction was not painful!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
                         <div>
                             <strong>Archana Manu</strong>
-                            <small>Google Review</small>
+                            <small data-i18n="google_review">Google Review</small>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"I had a wonderful experience for my braces treatment with Dr. Reeja. I was so scared at the beginning, but was amazed as to how she handled me with reassurance. She is very talented."</p>
+                    <p data-i18n="test_review5">"I had a wonderful experience for my braces treatment with Dr. Reeja. I was so scared at the beginning, but was amazed as to how she handled me with reassurance. She is very talented."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">A</div>
                         <div>
                             <strong>Aleen Ali</strong>
-                            <small>Google Review</small>
+                            <small data-i18n="google_review">Google Review</small>
                         </div>
                     </div>
                 </div>
                 <div class="testimonial-card">
                     <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"I had good experience with this clinic. Dr. Manoj is an expert in dental treatments. I recommend to all!"</p>
+                    <p data-i18n="test_review6">"I had good experience with this clinic. Dr. Manoj is an expert in dental treatments. I recommend to all!"</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">T</div>
                         <div>
                             <strong>Taher Rehmanji</strong>
-                            <small>Google Review</small>
+                            <small data-i18n="google_review">Google Review</small>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="btn-view-more" id="btnViewMore" onclick="document.getElementById('extraReviews').classList.toggle('show'); this.textContent = this.textContent === 'View More Reviews' ? 'Show Less' : 'View More Reviews'">View More Reviews</button>
+            <button class="btn-view-more" id="btnViewMore" onclick="document.getElementById('extraReviews').classList.toggle('show'); const t = translations[document.documentElement.getAttribute('lang') || 'en']; this.textContent = document.getElementById('extraReviews').classList.contains('show') ? (t?.show_less || 'Show Less') : (t?.view_more || 'View More Reviews')" data-i18n="view_more">View More Reviews</button>
         </div>
     </section>
 
@@ -637,8 +641,8 @@
     <section class="insurance section">
         <div class="container">
             <div class="section-header">
-                <p class="section-subtitle">Insurance</p>
-                <h2 class="section-title">We Accept All Major <span class="text-accent">Insurance</span></h2>
+                <p class="section-subtitle" data-i18n="ins_subtitle">Insurance</p>
+                <h2 class="section-title" data-i18n-html="ins_title">We Accept All Major <span class="text-accent">Insurance</span></h2>
             </div>
             <div class="insurance-grid">
                 <div class="insurance-item">Daman</div>
@@ -658,17 +662,17 @@
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-info">
-                    <p class="section-subtitle">Get in Touch</p>
-                    <h2 class="section-title">Book Your <span class="text-accent">Appointment</span></h2>
-                    <p class="contact-desc">Visit us or reach out to schedule an appointment. We're here to help you achieve your perfect smile.</p>
+                    <p class="section-subtitle" data-i18n="contact_subtitle">Get in Touch</p>
+                    <h2 class="section-title" data-i18n-html="contact_title">Book Your <span class="text-accent">Appointment</span></h2>
+                    <p class="contact-desc" data-i18n="contact_desc">Visit us or reach out to schedule an appointment. We're here to help you achieve your perfect smile.</p>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="ci-icon">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             </div>
                             <div>
-                                <h4>Location</h4>
-                                <p>Ajman, United Arab Emirates</p>
+                                <h4 data-i18n="contact_location_title">Location</h4>
+                                <p data-i18n="contact_location">Ajman, United Arab Emirates</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -676,7 +680,7 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div>
-                                <h4>Phone</h4>
+                                <h4 data-i18n="contact_phone_title">Phone</h4>
                                 <p><a href="tel:+97167444272">+971 6 744 4272</a><br><a href="tel:+971501783229">+971 50 178 3229</a><br><a href="tel:+971505482851">+971 50 548 2851</a></p>
                             </div>
                         </div>
@@ -685,8 +689,8 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                             </div>
                             <div>
-                                <h4>Working Hours</h4>
-                                <p>Sat - Thu: 9:00 AM - 1:30 PM &amp; 5:00 PM - 9:30 PM<br>Sunday: By Appointment Only</p>
+                                <h4 data-i18n="contact_hours_title">Working Hours</h4>
+                                <p data-i18n-html="contact_hours">Sat - Thu: 9:00 AM - 1:30 PM &amp; 5:00 PM - 9:30 PM<br>Sunday: By Appointment Only</p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -694,7 +698,7 @@
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             </div>
                             <div>
-                                <h4>Email</h4>
+                                <h4 data-i18n="contact_email_title">Email</h4>
                                 <p><a href="mailto:info@rashidhealthcare.ae">info@rashidhealthcare.ae</a></p>
                             </div>
                         </div>
@@ -702,30 +706,30 @@
                 </div>
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contactForm">
-                        <h3>Request an Appointment</h3>
+                        <h3 data-i18n="form_title">Request an Appointment</h3>
                         <div class="form-row">
                             <div class="form-group">
-                                <input type="text" placeholder="Full Name *" required>
+                                <input type="text" data-i18n-placeholder="form_name" placeholder="Full Name *" required>
                             </div>
                             <div class="form-group">
-                                <input type="tel" placeholder="Phone Number *" required>
+                                <input type="tel" data-i18n-placeholder="form_phone" placeholder="Phone Number *" required>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address">
+                            <input type="email" data-i18n-placeholder="form_email" placeholder="Email Address">
                         </div>
                         <div class="form-group">
                             <select>
-                                <option value="">Select Service *</option>
-                                <option>Orthodontics / Braces</option>
-                                <option>Invisalign</option>
-                                <option>Cosmetic Dentistry</option>
-                                <option>Dental Implants</option>
-                                <option>Root Canal Treatment</option>
-                                <option>Children's Dentistry</option>
-                                <option>Teeth Cleaning</option>
-                                <option>General Check-up</option>
-                                <option>General Medicine / GP</option>
+                                <option value="" data-i18n="form_service">Select Service *</option>
+                                <option data-i18n="form_svc_ortho">Orthodontics / Braces</option>
+                                <option data-i18n="form_svc_invis">Invisalign</option>
+                                <option data-i18n="form_svc_cosm">Cosmetic Dentistry</option>
+                                <option data-i18n="form_svc_impl">Dental Implants</option>
+                                <option data-i18n="form_svc_root">Root Canal Treatment</option>
+                                <option data-i18n="form_svc_child">Children's Dentistry</option>
+                                <option data-i18n="form_svc_clean">Teeth Cleaning</option>
+                                <option data-i18n="form_svc_check">General Check-up</option>
+                                <option data-i18n="form_svc_gp">General Medicine / GP</option>
                             </select>
                         </div>
                         <div class="form-row">
@@ -734,18 +738,18 @@
                             </div>
                             <div class="form-group">
                                 <select>
-                                    <option value="">Preferred Time</option>
-                                    <option>9:00 AM - 12:00 PM</option>
-                                    <option>12:00 PM - 3:00 PM</option>
-                                    <option>3:00 PM - 6:00 PM</option>
-                                    <option>6:00 PM - 10:00 PM</option>
+                                    <option value="" data-i18n="form_time">Preferred Time</option>
+                                    <option data-i18n="form_time1">9:00 AM - 12:00 PM</option>
+                                    <option data-i18n="form_time2">12:00 PM - 3:00 PM</option>
+                                    <option data-i18n="form_time3">3:00 PM - 6:00 PM</option>
+                                    <option data-i18n="form_time4">6:00 PM - 10:00 PM</option>
                                 </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <textarea rows="3" placeholder="Your Message (Optional)"></textarea>
+                            <textarea rows="3" data-i18n-placeholder="form_message" placeholder="Your Message (Optional)"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Book Appointment</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="form_submit">Book Appointment</button>
                     </form>
                 </div>
             </div>
@@ -773,7 +777,7 @@
                     <div class="footer-logo">
                         <img src="images/logo-full.png" alt="Rashid Medical Centre" class="logo-img footer-logo-img">
                     </div>
-                    <p>Providing expert dental care and beautiful smiles to the community of Ajman and surrounding areas for over 25 years.</p>
+                    <p data-i18n="footer_desc">Providing expert dental care and beautiful smiles to the community of Ajman and surrounding areas for over 25 years.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.04c-5.5 0-10 4.49-10 10.02 0 5 3.66 9.15 8.44 9.9v-7H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.9h-2.33v7a10 10 0 008.44-9.9c0-5.53-4.5-10.02-10-10.02z"/></svg></a>
                         <a href="#" aria-label="Instagram" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 011.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 1.802c-2.67 0-2.986.01-4.04.058-.976.045-1.505.207-1.858.344-.466.182-.8.398-1.15.748-.35.35-.566.684-.748 1.15-.137.353-.3.882-.344 1.857-.048 1.055-.058 1.37-.058 4.041 0 2.67.01 2.986.058 4.04.045.977.207 1.505.344 1.858.182.466.399.8.748 1.15.35.35.684.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058 2.67 0 2.987-.01 4.04-.058.977-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.684.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041 0-2.67-.01-2.986-.058-4.04-.045-.977-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.054-.048-1.37-.058-4.041-.058zm0 3.063a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 8.468a3.333 3.333 0 100-6.666 3.333 3.333 0 000 6.666zm6.538-8.671a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z"/></svg></a>
@@ -781,34 +785,34 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick Links</h4>
-                    <a href="#about">About Us</a>
-                    <a href="#services">Services</a>
-                    <a href="#doctors">Our Doctors</a>
-                    <a href="#contact">Contact</a>
+                    <h4 data-i18n="footer_quick">Quick Links</h4>
+                    <a href="#about" data-i18n="footer_about">About Us</a>
+                    <a href="#services" data-i18n="footer_services">Services</a>
+                    <a href="#doctors" data-i18n="footer_doctors">Our Doctors</a>
+                    <a href="#contact" data-i18n="footer_contact">Contact</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Services</h4>
-                    <a href="#services">Orthodontics</a>
-                    <a href="#services">Invisalign</a>
-                    <a href="#services">Cosmetic Dentistry</a>
-                    <a href="#services">Dental Implants</a>
-                    <a href="#services">Root Canal</a>
-                    <a href="#services">Teeth Cleaning</a>
-                    <a href="#services">General Medicine</a>
+                    <h4 data-i18n="footer_svc_title">Services</h4>
+                    <a href="#services" data-i18n="footer_svc_ortho">Orthodontics</a>
+                    <a href="#services" data-i18n="footer_svc_invis">Invisalign</a>
+                    <a href="#services" data-i18n="footer_svc_cosm">Cosmetic Dentistry</a>
+                    <a href="#services" data-i18n="footer_svc_impl">Dental Implants</a>
+                    <a href="#services" data-i18n="footer_svc_root">Root Canal</a>
+                    <a href="#services" data-i18n="footer_svc_clean">Teeth Cleaning</a>
+                    <a href="#services" data-i18n="footer_svc_gp">General Medicine</a>
                 </div>
                 <div class="footer-col">
-                    <h4>Opening Hours</h4>
+                    <h4 data-i18n="footer_hours_title">Opening Hours</h4>
                     <div class="hours">
-                        <p>Sat - Thu<br><strong>9:00 AM - 1:30 PM &amp; 5:00 PM - 9:30 PM</strong></p>
-                        <p>Sunday<br><strong>By Appointment Only</strong></p>
+                        <p><span data-i18n="footer_hours_weekday">Sat - Thu</span><br><strong data-i18n="footer_hours_weekday_time">9:00 AM - 1:30 PM &amp; 5:00 PM - 9:30 PM</strong></p>
+                        <p><span data-i18n="footer_hours_sunday">Sunday</span><br><strong data-i18n="footer_hours_sunday_time">By Appointment Only</strong></p>
                     </div>
-                    <h4 style="margin-top:1rem;">Emergency</h4>
+                    <h4 style="margin-top:1rem;" data-i18n="footer_emergency">Emergency</h4>
                     <p><a href="tel:+97167444272" style="color:var(--accent);">+971 6 744 4272</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Rashid Medical Centre. All Rights Reserved.</p>
+                <p data-i18n="footer_copyright">&copy; 2026 Rashid Medical Centre. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -818,6 +822,7 @@
         <svg viewBox="0 0 32 32" fill="#fff" width="28" height="28"><path d="M16.004 0h-.008C7.174 0 .002 7.174.002 16c0 3.502 1.128 6.744 3.046 9.378L1.06 31.29l6.168-1.966A15.9 15.9 0 0016.004 32C24.826 32 32 24.826 32 16S24.826 0 16.004 0zm9.31 22.6c-.39 1.1-1.932 2.014-3.168 2.28-.846.18-1.95.324-5.67-1.218-4.762-1.97-7.826-6.81-8.064-7.124-.23-.314-1.904-2.536-1.904-4.834s1.204-3.43 1.632-3.898c.39-.426.914-.604 1.214-.604.15 0 .284.008.406.014.428.018.642.042.924.714.354.842 1.214 2.96 1.32 3.176.108.216.216.504.066.804-.14.306-.264.498-.48.762-.216.264-.444.588-.636.792-.216.228-.44.474-.19.928.252.444 1.118 1.846 2.402 2.99 1.65 1.474 3.04 1.932 3.472 2.146.352.174.636.148.87-.09.294-.3.636-.798.984-1.29.248-.352.56-.396.942-.238.386.15 2.444 1.152 2.862 1.362.418.21.698.312.8.486.102.174.102.998-.288 2.098z"/></svg>
     </a>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

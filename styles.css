@@ -319,6 +319,35 @@ ul { list-style: none; }
     display: none;
 }
 
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    padding: 3px;
+    cursor: pointer;
+    z-index: 100;
+    gap: 0;
+    flex-shrink: 0;
+}
+
+.lang-option {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    border-radius: 50px;
+    color: var(--text-light);
+    transition: var(--transition);
+    line-height: 1;
+}
+
+.lang-option.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
 .mobile-toggle {
     display: flex;
     flex-direction: column;
@@ -2444,5 +2473,108 @@ ul { list-style: none; }
         right: 28px;
         width: 58px;
         height: 58px;
+    }
+}
+
+/* ===== RTL SUPPORT ===== */
+[dir="rtl"] {
+    font-family: 'Poppins', 'Noto Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+[dir="rtl"] .section-subtitle::before {
+    order: 1;
+}
+
+[dir="rtl"] .hero-inner {
+    text-align: right;
+}
+
+[dir="rtl"] .hero-btns {
+    justify-content: flex-end;
+}
+
+[dir="rtl"] .hero-stats {
+    justify-content: flex-end;
+}
+
+[dir="rtl"] .about-feature {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+[dir="rtl"] .why-item {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+[dir="rtl"] .contact-item {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+[dir="rtl"] .form-group select {
+    background-position: left 16px center;
+    padding-right: 16px;
+    padding-left: 40px;
+}
+
+[dir="rtl"] .form-group input,
+[dir="rtl"] .form-group select,
+[dir="rtl"] .form-group textarea {
+    text-align: right;
+}
+
+[dir="rtl"] .nav {
+    direction: rtl;
+}
+
+[dir="rtl"] .whatsapp-float {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .footer-col {
+    text-align: right;
+}
+
+[dir="rtl"] .social-links {
+    justify-content: flex-end;
+}
+
+@media (min-width: 1024px) {
+    [dir="rtl"] .hero-inner {
+        direction: rtl;
+    }
+
+    [dir="rtl"] .hero-btns {
+        justify-content: flex-start;
+    }
+
+    [dir="rtl"] .hero-stats {
+        justify-content: flex-start;
+    }
+
+    [dir="rtl"] .stat {
+        align-items: flex-end;
+    }
+
+    [dir="rtl"] .about-grid {
+        direction: rtl;
+    }
+
+    [dir="rtl"] .why-us-grid {
+        direction: rtl;
+    }
+
+    [dir="rtl"] .contact-grid {
+        direction: rtl;
+    }
+
+    [dir="rtl"] .footer-grid {
+        direction: rtl;
+    }
+
+    [dir="rtl"] .whatsapp-float {
+        left: 28px;
     }
 }
