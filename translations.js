@@ -9,6 +9,7 @@ const translations = {
         nav_doctors: "Our Doctors",
         nav_testimonials: "Testimonials",
         nav_contact: "Contact",
+        nav_blog: "Blog",
         header_cta: "Book Appointment",
 
         // Hero
@@ -196,6 +197,7 @@ const translations = {
         nav_doctors: "\u0623\u0637\u0628\u0627\u0624\u0646\u0627",
         nav_testimonials: "\u0622\u0631\u0627\u0621 \u0627\u0644\u0645\u0631\u0636\u0649",
         nav_contact: "\u0627\u062a\u0635\u0644 \u0628\u0646\u0627",
+        nav_blog: "\u0645\u062f\u0648\u0646\u0629",
         header_cta: "\u0627\u062d\u062c\u0632 \u0645\u0648\u0639\u062f",
 
         // Hero
