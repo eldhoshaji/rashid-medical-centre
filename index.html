@@ -16,6 +16,11 @@
     <meta name="author" content="Rashid Medical Centre">
     <link rel="canonical" href="https://rashidhealthcare.ae/">
 
+    <!-- Hreflang Tags for Multi-language SEO -->
+    <link rel="alternate" hreflang="en" href="https://rashidhealthcare.ae/">
+    <link rel="alternate" hreflang="ar" href="https://rashidhealthcare.ae/?lang=ar">
+    <link rel="alternate" hreflang="x-default" href="https://rashidhealthcare.ae/">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rashidhealthcare.ae/">
@@ -179,6 +184,60 @@
     }
     </script>
 
+    <!-- Structured Data - Reviews -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Rashid Medical Centre",
+        "url": "https://rashidhealthcare.ae",
+        "review": [
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Anjali Rose Dayal"},
+                "datePublished": "2025-12-15",
+                "reviewBody": "Love going to Dr. Manoj Matthew for my teeth. He's really quick and efficient. The clinic has great customer service too!",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Johan Gimmy"},
+                "datePublished": "2026-01-10",
+                "reviewBody": "Best orthodontist clinic ever! The braces treatment was smooth, comfortable, and totally worth it. Super professional team, very friendly, and they really know what they're doing.",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Arish Ibrahim"},
+                "datePublished": "2026-02-05",
+                "reviewBody": "Being a diabetic patient, I was particularly anxious about undergoing a root canal treatment. However, my experience with Dr. Reeja Moideen at Rashid Medical Centre completely changed my perspective. She was incredibly thorough in managing my blood sugar levels throughout the treatment. The root canal itself was virtually painless.",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Archana Manu"},
+                "datePublished": "2026-01-22",
+                "reviewBody": "I visit Dr. Manoj for my daughter's braces. It was a very good experience — my daughter just had braces a few months ago and it's getting better. Even the tooth extraction was not painful!",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Aleen Ali"},
+                "datePublished": "2026-02-18",
+                "reviewBody": "I had a wonderful experience for my braces treatment with Dr. Reeja. I was so scared at the beginning, but was amazed as to how she handled me with reassurance. She is very talented.",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            },
+            {
+                "@type": "Review",
+                "author": {"@type": "Person", "name": "Taher Rehmanji"},
+                "datePublished": "2026-01-30",
+                "reviewBody": "I had good experience with this clinic. Dr. Manoj is an expert in dental treatments. I recommend to all!",
+                "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+            }
+        ]
+    }
+    </script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y71HRZWXX5"></script>
     <script>
@@ -324,76 +383,76 @@
                 <p class="section-desc" data-i18n="services_desc">From general medicine to advanced orthodontics, we offer a full range of dental and medical services under one roof.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <a href="services/orthodontics.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 2C4.2 2 2 4.2 2 7c0 2.5 1.5 5 3 7s3 4.5 3 7c0 1.1.9 2 2 2s2-.9 2-2c0-2.5 1.5-5 3-7s3-4.5 3-7c0-2.8-2.2-5-5-5-1.5 0-2.5.5-3 1-.5-.5-1.5-1-3-1z"/></svg>
                     </div>
                     <h3 data-i18n="svc_orthodontics">Orthodontics</h3>
                     <p data-i18n="svc_orthodontics_desc">Expert teeth alignment with traditional braces, ceramic braces, and advanced orthodontic treatments for all ages.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/invisalign.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c-1.5 0-2.5 1-3 2H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2c-.5-1-1.5-2-3-2z"/><path d="M9 14l2 2 4-4"/></svg>
                     </div>
                     <h3 data-i18n="svc_invisalign">Invisalign</h3>
                     <p data-i18n="svc_invisalign_desc">Clear, virtually invisible aligners that straighten your teeth without the look of traditional metal braces.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/cosmetic-dentistry.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     </div>
                     <h3 data-i18n="svc_cosmetic">Cosmetic Dentistry</h3>
                     <p data-i18n="svc_cosmetic_desc">Hollywood smile makeovers, veneers, teeth whitening, and bonding to give you the perfect, confident smile.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/dental-implants.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
                     </div>
                     <h3 data-i18n="svc_implants">Dental Implants</h3>
                     <p data-i18n="svc_implants_desc">Permanent tooth replacement solutions using the latest implant technology for a natural look and feel.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/root-canal.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     </div>
                     <h3 data-i18n="svc_rootcanal">Root Canal Treatment</h3>
                     <p data-i18n="svc_rootcanal_desc">Painless root canal therapy to save damaged teeth using modern techniques and advanced anesthesia.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/childrens-dentistry.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
                     <h3 data-i18n="svc_children">Children's Dentistry</h3>
                     <p data-i18n="svc_children_desc">Gentle and fun dental care for kids, including preventive treatments, sealants, and early orthodontic assessments.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/digital-xrays.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="16" rx="2"/><path d="M8 21h8M12 19v2"/><circle cx="12" cy="11" r="4"/><path d="M12 7v8M8 11h8"/></svg>
                     </div>
                     <h3 data-i18n="svc_xray">Digital X-Rays</h3>
                     <p data-i18n="svc_xray_desc">Low-radiation digital dental X-rays for accurate diagnosis with instant results and detailed imaging.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/teeth-cleaning.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3h6v5l4 8H5l4-8V3z"/><path d="M7 3h10"/><path d="M3 20h18"/><circle cx="12" cy="14" r="1"/></svg>
                     </div>
                     <h3 data-i18n="svc_cleaning">Teeth Cleaning</h3>
                     <p data-i18n="svc_cleaning_desc">Professional dental cleaning, scaling, and polishing to maintain healthy gums and prevent tooth decay.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/intraoral-scanner.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12C2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z"/><path d="M8 12h8"/><path d="M12 8v8"/><path d="M7 3l2 4M17 3l-2 4"/></svg>
                     </div>
                     <h3 data-i18n="svc_scanner">Intraoral Scanner</h3>
                     <p data-i18n="svc_scanner_desc">Advanced digital impressions using 3D intraoral scanning technology for precise, comfortable, and fast dental treatment planning.</p>
-                </div>
-                <div class="service-card">
+                </a>
+                <a href="services/general-medicine.html" class="service-card" style="text-decoration:none;color:inherit;">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     </div>
                     <h3 data-i18n="svc_gp">General Medicine</h3>
                     <p data-i18n="svc_gp_desc">Comprehensive GP consultations for everyday health concerns, chronic disease management, and preventive care for the whole family.</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -793,13 +852,13 @@
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="footer_svc_title">Services</h4>
-                    <a href="#services" data-i18n="footer_svc_ortho">Orthodontics</a>
-                    <a href="#services" data-i18n="footer_svc_invis">Invisalign</a>
-                    <a href="#services" data-i18n="footer_svc_cosm">Cosmetic Dentistry</a>
-                    <a href="#services" data-i18n="footer_svc_impl">Dental Implants</a>
-                    <a href="#services" data-i18n="footer_svc_root">Root Canal</a>
-                    <a href="#services" data-i18n="footer_svc_clean">Teeth Cleaning</a>
-                    <a href="#services" data-i18n="footer_svc_gp">General Medicine</a>
+                    <a href="services/orthodontics.html" data-i18n="footer_svc_ortho">Orthodontics</a>
+                    <a href="services/invisalign.html" data-i18n="footer_svc_invis">Invisalign</a>
+                    <a href="services/cosmetic-dentistry.html" data-i18n="footer_svc_cosm">Cosmetic Dentistry</a>
+                    <a href="services/dental-implants.html" data-i18n="footer_svc_impl">Dental Implants</a>
+                    <a href="services/root-canal.html" data-i18n="footer_svc_root">Root Canal</a>
+                    <a href="services/teeth-cleaning.html" data-i18n="footer_svc_clean">Teeth Cleaning</a>
+                    <a href="services/general-medicine.html" data-i18n="footer_svc_gp">General Medicine</a>
                 </div>
                 <div class="footer-col">
                     <h4 data-i18n="footer_hours_title">Opening Hours</h4>
